@@ -70,7 +70,7 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Satellite</source>
+        <source>Satcoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -169,6 +169,10 @@
 <context>
     <name>Intro</name>
     <message>
+        <source>Satcoin</source>
+        <translation>Биткоин</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>қате</translation>
     </message>
@@ -184,6 +188,10 @@
     <message>
         <source>W&amp;allet</source>
         <translation>Әмиян</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>қате</translation>
     </message>
     </context>
 <context>
@@ -228,6 +236,10 @@
     </context>
 <context>
     <name>ReceiveRequestDialog</name>
+    <message>
+        <source>Wallet</source>
+        <translation>Әмиян</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>

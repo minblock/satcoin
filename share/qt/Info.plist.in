@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
   <key>LSMinimumSystemVersion</key>
-  <string>10.8.0</string>
+  <string>10.10.0</string>
 
   <key>LSArchitecturePriority</key>
   <array>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Satellite-Qt</string>
+  <string>Satcoin-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Satellite-Qt</string>
+  <string>Satcoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.satellite.Satellite-Qt</string>
+  <string>org.satcoin.Satcoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.satellite.SatellitePayment</string>
+      <string>org.satcoin.SatcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>satellite</string>
+        <string>satcoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.satellite.paymentrequest</string>
+      <string>org.satcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Satellite payment request</string>
+      <string>Satcoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-satellite-payment-request</string>
+        <string>application/x-satcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>satellitepaymentrequest</string>
+          <string>satcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.satellite.paymentrequest</string>
+        <string>org.satcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
@@ -98,6 +98,9 @@
     <string>True</string>
 
   <key>LSAppNapIsDisabled</key>
+    <string>True</string>
+
+  <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
   
   <key>LSApplicationCategoryType</key>

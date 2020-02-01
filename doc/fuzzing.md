@@ -1,7 +1,7 @@
-Fuzz-testing Satellite Core
+Fuzz-testing Satcoin Core
 ==========================
 
-A special test harness `test_satellite_fuzzy` is provided to provide an easy
+A special test harness `test_satcoin_fuzzy` is provided to provide an easy
 entry point for fuzzers and the like. In this document we'll describe how to
 use it with AFL.
 
@@ -20,17 +20,24 @@ export AFLPATH=$PWD
 Instrumentation
 ----------------
 
-To build Satellite Core using AFL instrumentation (this assumes that the
+To build Satcoin Core using AFL instrumentation (this assumes that the
 `AFLPATH` was set as above):
 ```
 ./configure --disable-ccache --disable-shared --enable-tests CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++
 export AFL_HARDEN=1
 cd src/
-make test/test_satellite_fuzzy
+make test/test_satcoin_fuzzy
 ```
 We disable ccache because we don't want to pollute the ccache with instrumented
 objects, and similarly don't want to use non-instrumented cached objects linked
 in.
+
+The fuzzing can be sped up significantly (~200x) by using `afl-clang-fast` and
+`afl-clang-fast++` in place of `afl-gcc` and `afl-g++` when compiling. When
+compiling using `afl-clang-fast`/`afl-clang-fast++` the resulting
+`test_satcoin_fuzzy` binary will be instrumented in such a way that the AFL
+features "persistent mode" and "deferred forkserver" can be used. See
+https://github.com/mcarpenter/afl/tree/master/llvm_mode for details.
 
 Preparing fuzzing
 ------------------
@@ -58,9 +65,8 @@ Fuzzing
 
 To start the actual fuzzing use:
 ```
-$AFLPATH/afl-fuzz -i ${AFLIN} -o ${AFLOUT} -m52 -- test/test_satellite_fuzzy
+$AFLPATH/afl-fuzz -i ${AFLIN} -o ${AFLOUT} -m52 -- test/test_satcoin_fuzzy
 ```
 
 You may have to change a few kernel parameters to test optimally - `afl-fuzz`
 will print an error and suggestion if so.
-

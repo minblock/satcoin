@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Satellite tests.
+Utilities to generate test vectors for the data-driven Satcoin tests.
 
 Usage: 
 

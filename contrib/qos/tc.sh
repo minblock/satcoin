@@ -2,11 +2,12 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+export LC_ALL=C
 #network interface on which to limit traffic
 IF="eth0"
 #limit of the network interface in question
 LINKCEIL="1gbit"
-#limit outbound Satellite protocol traffic to this rate
+#limit outbound Satcoin protocol traffic to this rate
 LIMIT="160kbit"
 #defines the address space for which you wish to disable rate limiting
 LOCALNET="192.168.0.0/16"
@@ -36,10 +37,10 @@ tc filter add dev ${IF} parent 1: protocol ip prio 2 handle 2 fw classid 1:11
 #	ret=$?
 #done
 
-#limit outgoing traffic to and from port 9333. but not when dealing with a host on the local network
+#limit outgoing traffic to and from port 6666. but not when dealing with a host on the local network
 #	(defined by $LOCALNET)
 #	--set-mark marks packages matching these criteria with the number "2"
 #	these packages are filtered by the tc filter with "handle 2"
 #	this filter sends the packages into the 1:11 class, and this class is limited to ${LIMIT}
-iptables -t mangle -A OUTPUT -p tcp -m tcp --dport 9333 ! -d ${LOCALNET} -j MARK --set-mark 0x2
-iptables -t mangle -A OUTPUT -p tcp -m tcp --sport 9333 ! -d ${LOCALNET} -j MARK --set-mark 0x2
+iptables -t mangle -A OUTPUT -p tcp -m tcp --dport 6666 ! -d ${LOCALNET} -j MARK --set-mark 0x2
+iptables -t mangle -A OUTPUT -p tcp -m tcp --sport 6666 ! -d ${LOCALNET} -j MARK --set-mark 0x2

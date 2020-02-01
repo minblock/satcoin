@@ -1,56 +1,57 @@
-Satellite Core 0.14.2
-=====================
+Satcoin Core
+=============
 
 Setup
 ---------------------
-Satellite Core is the original Satellite client and it builds the backbone of the network. However, it downloads and stores the entire history of Satellite transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Satcoin Core is the original Satcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Satcoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Satellite Core, visit [satellite.org](https://satellite.org).
+To download Satcoin Core, visit [satcoin.org](https://satcoin.org).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Satellite on your native platform.
+The following are some helpful notes on how to run Satcoin Core on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/satellite-qt` (GUI) or
-- `bin/satellited` (headless)
+- `bin/satcoin-qt` (GUI) or
+- `bin/satcoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run satellite-qt.exe.
+Unpack the files into a directory, and then run satcoin-qt.exe.
 
-### OS X
+### macOS
 
-Drag Satellite-Core to your applications folder, and then run Satellite-Core.
+Drag Satcoin Core to your applications folder, and then run Satcoin Core.
 
 ### Need Help?
 
-* See the documentation at the [Satellite Wiki](https://satellite.info/)
+* See the documentation at the [Satcoin Wiki](https://satcoin.info/)
 for help and more information.
-* Ask for help on [#satellite](http://webchat.freenode.net?channels=satellite) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=satellite).
-* Ask for help on the [SatelliteTalk](https://satellitetalk.io/) forums.
+* Ask for help on [#satcoin](http://webchat.freenode.net?channels=satcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=satcoin).
+* Ask for help on the [SatcoinTalk](https://satcointalk.io/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Satellite on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Satcoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
-- [OS X Build Notes](build-osx.md)
+- [Dependencies](dependencies.md)
+- [macOS Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 - [Windows Build Notes](build-windows.md)
 - [OpenBSD Build Notes](build-openbsd.md)
+- [NetBSD Build Notes](build-netbsd.md)
 - [Gitian Building Guide](gitian-building.md)
 
 Development
 ---------------------
-The Satellite repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Satcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/satellite/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)
@@ -61,8 +62,8 @@ The Satellite repo's [root README](/README.md) contains relevant information on 
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [SatelliteTalk](https://satellitetalk.io/) forums.
-* Discuss general Satellite development on #satellite-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=satellite-dev).
+* Discuss on the [SatcoinTalk](https://satcointalk.io/) forums.
+* Discuss general Satcoin development on #satcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=satcoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
