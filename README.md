@@ -1,7 +1,7 @@
 Satellite Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/satellite-project/satellite.svg?branch=master)](https://travis-ci.org/satellite-project/satellite)
+[![Build Status](https://travis-ci.org/minblock/satellite.svg?branch=master)](https://travis-ci.org/minblock/satellite)
 
 https://satellite.org
 
@@ -27,7 +27,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/satellite-project/satellite/tags) are created
+completely stable. [Tags](https://github.com/minblock/satellite/tags) are created
 regularly to indicate new official, stable release versions of Satellite Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

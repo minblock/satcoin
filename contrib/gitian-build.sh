@@ -5,21 +5,21 @@
 # What to do
 sign=false
 verify=false
-build=false
-setupenv=false
+build=true
+setupenv=true
 
 # Systems to build
-linux=true
+linux=false
 windows=true
-osx=true
+osx=false
 
 # Other Basic variables
-SIGNER=
-VERSION=
+SIGNER=minblock
+VERSION=0.14.2.2
 commit=false
-url=https://github.com/satellite-project/satellite
-proc=2
-mem=2000
+url=https://github.com/minblock/satellite
+proc=12
+mem=20000
 lxc=true
 osslTarUrl=http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
 osslPatchUrl=https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
@@ -39,7 +39,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/satellite-project/satellite
+-u|--url	Specify the URL of the repository. Default is https://github.com/minblock/satellite
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -176,12 +176,12 @@ while :; do
 done
 
 # Set up LXC
-if [[ $lxc = true ]]
-then
-    export USE_LXC=1
-    export LXC_BRIDGE=lxcbr0
-    sudo ifconfig lxcbr0 up 10.0.2.2
-fi
+#if [[ $lxc = true ]]
+#then
+#    export USE_LXC=1
+#    export LXC_BRIDGE=lxcbr0
+#    sudo ifconfig lxcbr0 up 10.0.2.2
+#fi
 
 # Check for OSX SDK
 if [[ ! -e "gitian-builder/inputs/MacOSX10.11.sdk.tar.gz" && $osx == true ]]
@@ -232,8 +232,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/satellite-project/gitian.sigs.ltc.git
-    git clone https://github.com/satellite-project/satellite-detached-sigs.git
+    git clone https://github.com/minblock/gitian.sigs.ltc.git
+    git clone https://github.com/minblock/satellite-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]

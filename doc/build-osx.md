@@ -29,7 +29,7 @@ Build Satellite Core
 
 1. Clone the satellite source code and cd into `satellite`
 
-        git clone https://github.com/satellite-project/satellite
+        git clone https://github.com/minblock/satellite
         cd satellite
 
 2.  Build satellite-core:

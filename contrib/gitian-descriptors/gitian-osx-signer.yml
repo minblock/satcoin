@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/satellite-project/satellite-detached-sigs.git"
+- "url": "https://github.com/minblock/satellite-detached-sigs.git"
   "dir": "signature"
 files:
 - "satellite-osx-unsigned.tar.gz"

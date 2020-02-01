@@ -28,7 +28,7 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/satellite-project/satellite.git"
+- "url": "https://github.com/minblock/satellite.git"
   "dir": "satellite"
 files:
 - "MacOSX10.11.sdk.tar.gz"
