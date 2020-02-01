@@ -394,8 +394,8 @@
         <translation>نوارابزار برگه‌ها</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and satcoin: URIs)</source>
-        <translation>درخواست پرداخت ( تولید کد کیوار و ادرس satcoin)</translation>
+        <source>Request payments (generates QR codes and satellite: URIs)</source>
+        <translation>درخواست پرداخت ( تولید کد کیوار و ادرس satellite)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -406,8 +406,8 @@
         <translation>نمایش لیست آدرس های دریافت و لیبل ها</translation>
     </message>
     <message>
-        <source>Open a satcoin: URI or payment request</source>
-        <translation>بازکردن یک satcoin: آدرس یا درخواست پرداخت</translation>
+        <source>Open a satellite: URI or payment request</source>
+        <translation>بازکردن یک satellite: آدرس یا درخواست پرداخت</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

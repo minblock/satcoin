@@ -131,8 +131,8 @@ public:
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("seed.pgn.one");
         /*vSeeds.emplace_back("dnsseed.thrasher.io");
-        vSeeds.emplace_back("dnsseed.satcointools.com");
-        vSeeds.emplace_back("dnsseed.satcoinpool.org");
+        vSeeds.emplace_back("dnsseed.satellitetools.com");
+        vSeeds.emplace_back("dnsseed.satellitepool.org");
         vSeeds.emplace_back("dnsseed.koin-project.com");*/
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,64); //Satcoin addresses begin with S or T
@@ -223,8 +223,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.satcointools.com");
-        vSeeds.emplace_back("seed-b.satcoin.loshan.co.uk");
+        vSeeds.emplace_back("testnet-seed.satellitetools.com");
+        vSeeds.emplace_back("seed-b.satellite.loshan.co.uk");
         vSeeds.emplace_back("dnsseed-testnet.thrasher.io");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);

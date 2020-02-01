@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.satcoin.Satcoin-Qt";
+        return @"org.satellite.Satcoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

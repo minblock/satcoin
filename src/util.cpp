@@ -81,8 +81,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "satcoin.conf";
-const char * const BITCOIN_PID_FILENAME = "satcoin.pid";
+const char * const BITCOIN_CONF_FILENAME = "satellite.conf";
+const char * const BITCOIN_PID_FILENAME = "satellite.pid";
 
 ArgsManager gArgs;
 
@@ -685,7 +685,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "satcoin";
+    const char* pszModule = "satellite";
 #endif
     if (pex)
         return strprintf(
@@ -723,7 +723,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Satcoin";
 #else
     // Unix
-    return pathRet / ".satcoin";
+    return pathRet / ".satellite";
 #endif
 #endif
 }

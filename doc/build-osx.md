@@ -41,10 +41,10 @@ from the root of the repository.
 Build Satcoin Core
 ------------------------
 
-1. Clone the Satcoin Core source code and cd into `satcoin`
+1. Clone the Satcoin Core source code and cd into `satellite`
 
-        git clone https://github.com/minblock/satcoin
-        cd satcoin
+        git clone https://github.com/minblock/satellite
+        cd satellite
 
 2.  Build Satcoin Core:
 
@@ -70,22 +70,22 @@ Build Satcoin Core
 
     or
 
-        cd ~/satcoin/src
-        cp satcoind /usr/local/bin/
-        cp satcoin-cli /usr/local/bin/
+        cd ~/satellite/src
+        cp satellited /usr/local/bin/
+        cp satellite-cli /usr/local/bin/
 
 Running
 -------
 
-Satcoin Core is now available at `./src/satcoind`
+Satcoin Core is now available at `./src/satellited`
 
 Before running, it's recommended that you create an RPC configuration file.
 
-    echo -e "rpcuser=satcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Satcoin/satcoin.conf"
+    echo -e "rpcuser=satelliterpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Satcoin/satellite.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Satcoin/satcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Satcoin/satellite.conf"
 
-The first time you run satcoind, it will start downloading the blockchain. This process could take several hours.
+The first time you run satellited, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -94,9 +94,9 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/satcoind -daemon # Starts the satcoin daemon.
-    ./src/satcoin-cli --help # Outputs a list of command-line options.
-    ./src/satcoin-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/satellited -daemon # Starts the satellite daemon.
+    ./src/satellite-cli --help # Outputs a list of command-line options.
+    ./src/satellite-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----

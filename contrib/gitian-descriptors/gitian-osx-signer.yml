@@ -1,5 +1,5 @@
 ---
-name: "satcoin-dmg-signer"
+name: "satellite-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/minblock/satcoin-detached-sigs.git"
+- "url": "https://github.com/minblock/satellite-detached-sigs.git"
   "dir": "signature"
 files:
-- "satcoin-osx-unsigned.tar.gz"
+- "satellite-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=satcoin-osx-unsigned.tar.gz
-  SIGNED=satcoin-osx-signed.dmg
+  UNSIGNED=satellite-osx-unsigned.tar.gz
+  SIGNED=satellite-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

@@ -47,11 +47,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Choisissez une adresse où envoyer les satcoins</translation>
+        <translation>Choisissez une adresse où envoyer les satellites</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Choisissez une adresse où recevoir les satcoins</translation>
+        <translation>Choisissez une adresse où recevoir les satellites</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -188,7 +188,7 @@
         <translation>Portefeuille chiffré</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your satcoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your satellites from being stolen by malware infecting your computer.</source>
         <translation>%1 va à présent se fermer pour terminer la procédure de cryptage. N'oubliez pas que le chiffrement de votre porte-monnaie ne peut pas fournir une protection totale contre le vol par des logiciels malveillants qui infecteraient votre ordinateur.</translation>
     </message>
     <message>
@@ -422,8 +422,8 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and satcoin: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et satcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and satellite: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et satellite: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -434,8 +434,8 @@
         <translation>Afficher la liste des labels et adresses de réception utilisées</translation>
     </message>
     <message>
-        <source>Open a satcoin: URI or payment request</source>
-        <translation>Ouvrir un satcoin: URI ou demande de paiement</translation>
+        <source>Open a satellite: URI or payment request</source>
+        <translation>Ouvrir un satellite: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

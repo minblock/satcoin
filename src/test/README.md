@@ -5,42 +5,42 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the satcoind tests manually, launch `src/test/test_satcoin`. To recompile
+To run the satellited tests manually, launch `src/test/test_satellite`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the satcoind tests.
+to run the satellited tests.
 
-To add more satcoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more satellited tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the satcoin-qt tests manually, launch `src/qt/test/test_satcoin-qt`
+To run the satellite-qt tests manually, launch `src/qt/test/test_satellite-qt`
 
-To add more satcoin-qt tests, add them to the `src/qt/test/` directory and
+To add more satellite-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_satcoin has some built-in command-line arguments; for
+test_satellite has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_satcoin --log_level=all --run_test=getarg_tests
+    test_satellite --log_level=all --run_test=getarg_tests
 
 ... or to run just the doubledash test:
 
-    test_satcoin --run_test=getarg_tests/doubledash
+    test_satellite --run_test=getarg_tests/doubledash
 
-Run `test_satcoin --help` for the full list.
+Run `test_satellite --help` for the full list.
 
 ### Note on adding test cases
 
 The sources in this directory are unit test cases.  Boost includes a
-unit testing framework, and since satcoin already uses boost, it makes
+unit testing framework, and since satellite already uses boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called "test_satcoin"
+The build system is setup to compile an executable called "test_satellite"
 that runs all of the unit tests.  The main source file is called
 test_bitcoin.cpp. To add a new unit test file to our test suite you need
 to add the file to `src/Makefile.test.include`. The pattern is to create

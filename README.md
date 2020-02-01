@@ -1,9 +1,9 @@
 Satcoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/minblock/satcoin.svg?branch=master)](https://travis-ci.org/minblock/satcoin)
+[![Build Status](https://travis-ci.org/minblock/satellite.svg?branch=master)](https://travis-ci.org/minblock/satellite)
 
-https://satcoin.org
+https://satellite.org
 
 What is Satcoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Satcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Satcoin Core software, see [https://satcoin.org](https://satcoin.org).
+the Satcoin Core software, see [https://satellite.org](https://satellite.org).
 
 License
 -------
@@ -27,16 +27,16 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/minblock/satcoin/tags) are created
+completely stable. [Tags](https://github.com/minblock/satellite/tags) are created
 regularly to indicate new official, stable release versions of Satcoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The developer [mailing list](https://groups.google.com/forum/#!forum/satcoin-dev)
+The developer [mailing list](https://groups.google.com/forum/#!forum/satellite-dev)
 should be used to discuss complicated or controversial changes before working
 on a patch set.
 
-Developer IRC can be found on Freenode at #satcoin-dev.
+Developer IRC can be found on Freenode at #satellite-dev.
 
 Testing
 -------

@@ -370,12 +370,12 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and satcoin: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja satcoini: URId)</translation>
+        <source>Request payments (generates QR codes and satellite: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja satellitei: URId)</translation>
     </message>
     <message>
-        <source>Open a satcoin: URI or payment request</source>
-        <translation>Ava satcoini: URI või maksepäring</translation>
+        <source>Open a satellite: URI or payment request</source>
+        <translation>Ava satellitei: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

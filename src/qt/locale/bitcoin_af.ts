@@ -410,8 +410,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and satcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en satcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and satellite: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en satellite: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,8 +422,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a satcoin: URI or payment request</source>
-        <translation>Skep 'n satcoin: URI of betalingsversoek</translation>
+        <source>Open a satellite: URI or payment request</source>
+        <translation>Skep 'n satellite: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

@@ -7,7 +7,7 @@
     ZMQ example using python3's asyncio
 
     Satcoin should be started with the command line arguments:
-        satcoind -testnet -daemon \
+        satellited -testnet -daemon \
                 -zmqpubrawtx=tcp://127.0.0.1:28332 \
                 -zmqpubrawblock=tcp://127.0.0.1:28332 \
                 -zmqpubhashtx=tcp://127.0.0.1:28332 \

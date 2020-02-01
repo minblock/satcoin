@@ -374,8 +374,8 @@
         <translation>Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and satcoin: URIs)</source>
-        <translation>Запатрабаваць плацёж (генеруецца QR-код для satcoin URI)</translation>
+        <source>Request payments (generates QR codes and satellite: URIs)</source>
+        <translation>Запатрабаваць плацёж (генеруецца QR-код для satellite URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -386,8 +386,8 @@
         <translation>Паказаць спіс адрасоў і метак для прымання</translation>
     </message>
     <message>
-        <source>Open a satcoin: URI or payment request</source>
-        <translation>Адкрыць satcoin: URI ці запыт плацяжу</translation>
+        <source>Open a satellite: URI or payment request</source>
+        <translation>Адкрыць satellite: URI ці запыт плацяжу</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

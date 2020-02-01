@@ -410,7 +410,7 @@
         <translation>Раздели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and satcoin: URIs)</source>
+        <source>Request payments (generates QR codes and satellite: URIs)</source>
         <translation>Изискване на плащания(генерира QR кодове и Satcoin: URIs)</translation>
     </message>
     <message>
@@ -422,7 +422,7 @@
         <translation>Покажи списък с използваните адреси и имена.</translation>
     </message>
     <message>
-        <source>Open a satcoin: URI or payment request</source>
+        <source>Open a satellite: URI or payment request</source>
         <translation>Отворете Satcoin: URI  или заявка за плащане</translation>
     </message>
     <message>
@@ -1054,7 +1054,7 @@
         <translation>Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start satcoin: click-to-pay handler</source>
+        <source>Cannot start satellite: click-to-pay handler</source>
         <translation>Satcoin не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>

@@ -13,7 +13,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the Satcoin network. This means one can have an always-on satcoind instance running, and another local satcoind/satcoin-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the Satcoin network. This means one can have an always-on satellited instance running, and another local satellited/satellite-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -45,4 +45,4 @@ Test and Verify Tools
 Utilities to generate test vectors for the data-driven Satcoin tests.
 
 ### [Verify Binaries](/contrib/verifybinaries) ###
-This script attempts to download and verify the signature file SHA256SUMS.asc from satcoin.org.
+This script attempts to download and verify the signature file SHA256SUMS.asc from satellite.org.

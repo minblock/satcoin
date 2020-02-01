@@ -44,14 +44,14 @@
 #include <QUrlQuery>
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("satcoin:");
+const QString BITCOIN_IPC_PREFIX("satellite:");
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 // BIP71 payment protocol media types
-const char* BIP71_MIMETYPE_PAYMENT = "application/satcoin-payment";
-const char* BIP71_MIMETYPE_PAYMENTACK = "application/satcoin-paymentack";
-const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/satcoin-paymentrequest";
+const char* BIP71_MIMETYPE_PAYMENT = "application/satellite-payment";
+const char* BIP71_MIMETYPE_PAYMENTACK = "application/satellite-paymentack";
+const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/satellite-paymentrequest";
 
 struct X509StoreDeleter {
       void operator()(X509_STORE* b) {
@@ -315,7 +315,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(0, tr("Payment request error"),
-                tr("Cannot start satcoin: click-to-pay handler"));
+                tr("Cannot start satellite: click-to-pay handler"));
         }
         else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
@@ -395,9 +395,9 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith("satcoin://", Qt::CaseInsensitive))
+    if (s.startsWith("satellite://", Qt::CaseInsensitive))
     {
-        Q_EMIT message(tr("URI handling"), tr("'satcoin://' is not a valid URI. Use 'satcoin:' instead."),
+        Q_EMIT message(tr("URI handling"), tr("'satellite://' is not a valid URI. Use 'satellite:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
     else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoin: URI

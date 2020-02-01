@@ -7,10 +7,10 @@ BUILDDIR=${BUILDDIR:-$TOPDIR}
 BINDIR=${BINDIR:-$BUILDDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-SATCOIND=${BITCOIND:-$BINDIR/satcoind}
-SATCOINCLI=${BITCOINCLI:-$BINDIR/satcoin-cli}
-SATCOINTX=${BITCOINTX:-$BINDIR/satcoin-tx}
-SATCOINQT=${BITCOINQT:-$BINDIR/qt/satcoin-qt}
+SATCOIND=${BITCOIND:-$BINDIR/satellited}
+SATCOINCLI=${BITCOINCLI:-$BINDIR/satellite-cli}
+SATCOINTX=${BITCOINTX:-$BINDIR/satellite-tx}
+SATCOINQT=${BITCOINQT:-$BINDIR/qt/satellite-qt}
 
 [ ! -x $SATCOIND ] && echo "$SATCOIND not found or not executable." && exit 1
 

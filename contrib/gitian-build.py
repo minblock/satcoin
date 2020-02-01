@@ -24,12 +24,12 @@ def setup():
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs.stc'):
         subprocess.check_call(['git', 'clone', 'https://github.com/minblock/gitian.sigs.stc.git'])
-    if not os.path.isdir('satcoin-detached-sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/minblock/satcoin-detached-sigs.git'])
+    if not os.path.isdir('satellite-detached-sigs'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/minblock/satellite-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
-    if not os.path.isdir('satcoin'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/minblock/satcoin.git'])
+    if not os.path.isdir('satellite'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/minblock/satellite.git'])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'bionic', '--arch', 'amd64']
     if args.docker:
@@ -46,34 +46,34 @@ def setup():
 def build():
     global args, workdir
 
-    os.makedirs('satcoin-binaries/' + args.version, exist_ok=True)
+    os.makedirs('satellite-binaries/' + args.version, exist_ok=True)
     print('\nBuilding Dependencies\n')
     os.chdir('gitian-builder')
     os.makedirs('inputs', exist_ok=True)
 
     subprocess.check_call(['wget', '-N', '-P', 'inputs', 'http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz'])
     subprocess.check_call(['wget', '-N', '-P', 'inputs', 'https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch'])
-    subprocess.check_call(['make', '-C', '../satcoin/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
+    subprocess.check_call(['make', '-C', '../satellite/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
 
     if args.linux:
         print('\nCompiling ' + args.version + ' Linux')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'satcoin='+args.commit, '--url', 'satcoin='+args.url, '../satcoin/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs.stc/', '../satcoin/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/satcoin-*.tar.gz build/out/src/satcoin-*.tar.gz ../satcoin-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'satellite='+args.commit, '--url', 'satellite='+args.url, '../satellite/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs.stc/', '../satellite/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call('mv build/out/satellite-*.tar.gz build/out/src/satellite-*.tar.gz ../satellite-binaries/'+args.version, shell=True)
 
     if args.windows:
         print('\nCompiling ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'satcoin='+args.commit, '--url', 'satcoin='+args.url, '../satcoin/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs.stc/', '../satcoin/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call('mv build/out/satcoin-*-win-unsigned.tar.gz inputs/satcoin-win-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/satcoin-*.zip build/out/satcoin-*.exe ../satcoin-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'satellite='+args.commit, '--url', 'satellite='+args.url, '../satellite/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs.stc/', '../satellite/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call('mv build/out/satellite-*-win-unsigned.tar.gz inputs/satellite-win-unsigned.tar.gz', shell=True)
+        subprocess.check_call('mv build/out/satellite-*.zip build/out/satellite-*.exe ../satellite-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nCompiling ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'satcoin='+args.commit, '--url', 'satcoin='+args.url, '../satcoin/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs.stc/', '../satcoin/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call('mv build/out/satcoin-*-osx-unsigned.tar.gz inputs/satcoin-osx-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/satcoin-*.tar.gz build/out/satcoin-*.dmg ../satcoin-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'satellite='+args.commit, '--url', 'satellite='+args.url, '../satellite/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs.stc/', '../satellite/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call('mv build/out/satellite-*-osx-unsigned.tar.gz inputs/satellite-osx-unsigned.tar.gz', shell=True)
+        subprocess.check_call('mv build/out/satellite-*.tar.gz build/out/satellite-*.dmg ../satellite-binaries/'+args.version, shell=True)
 
     os.chdir(workdir)
 
@@ -92,16 +92,16 @@ def sign():
 
     if args.windows:
         print('\nSigning ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../satcoin/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs.stc/', '../satcoin/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call('mv build/out/satcoin-*win64-setup.exe ../satcoin-binaries/'+args.version, shell=True)
-        subprocess.check_call('mv build/out/satcoin-*win32-setup.exe ../satcoin-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../satellite/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs.stc/', '../satellite/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call('mv build/out/satellite-*win64-setup.exe ../satellite-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/satellite-*win32-setup.exe ../satellite-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nSigning ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../satcoin/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs.stc/', '../satcoin/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call('mv build/out/satcoin-osx-signed.dmg ../satcoin-binaries/'+args.version+'/satcoin-'+args.version+'-osx.dmg', shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../satellite/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs.stc/', '../satellite/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call('mv build/out/satellite-osx-signed.dmg ../satellite-binaries/'+args.version+'/satellite-'+args.version+'-osx.dmg', shell=True)
 
     os.chdir(workdir)
 
@@ -118,15 +118,15 @@ def verify():
     os.chdir('gitian-builder')
 
     print('\nVerifying v'+args.version+' Linux\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-linux', '../satcoin/contrib/gitian-descriptors/gitian-linux.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-linux', '../satellite/contrib/gitian-descriptors/gitian-linux.yml'])
     print('\nVerifying v'+args.version+' Windows\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-win-unsigned', '../satcoin/contrib/gitian-descriptors/gitian-win.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-win-unsigned', '../satellite/contrib/gitian-descriptors/gitian-win.yml'])
     print('\nVerifying v'+args.version+' MacOS\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-osx-unsigned', '../satcoin/contrib/gitian-descriptors/gitian-osx.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-osx-unsigned', '../satellite/contrib/gitian-descriptors/gitian-osx.yml'])
     print('\nVerifying v'+args.version+' Signed Windows\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-win-signed', '../satcoin/contrib/gitian-descriptors/gitian-win-signer.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-win-signed', '../satellite/contrib/gitian-descriptors/gitian-win-signer.yml'])
     print('\nVerifying v'+args.version+' Signed MacOS\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-osx-signed', '../satcoin/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs.stc/', '-r', args.version+'-osx-signed', '../satellite/contrib/gitian-descriptors/gitian-osx-signer.yml'])
 
     os.chdir(workdir)
 
@@ -135,7 +135,7 @@ def main():
 
     parser = argparse.ArgumentParser(usage='%(prog)s [options] signer version')
     parser.add_argument('-c', '--commit', action='store_true', dest='commit', help='Indicate that the version argument is for a commit or branch')
-    parser.add_argument('-u', '--url', dest='url', default='https://github.com/minblock/satcoin', help='Specify the URL of the repository. Default is %(default)s')
+    parser.add_argument('-u', '--url', dest='url', default='https://github.com/minblock/satellite', help='Specify the URL of the repository. Default is %(default)s')
     parser.add_argument('-v', '--verify', action='store_true', dest='verify', help='Verify the Gitian build')
     parser.add_argument('-b', '--build', action='store_true', dest='build', help='Do a Gitian build')
     parser.add_argument('-s', '--sign', action='store_true', dest='sign', help='Make signed binaries for Windows and MacOS')
@@ -202,7 +202,7 @@ def main():
     if args.setup:
         setup()
 
-    os.chdir('satcoin')
+    os.chdir('satellite')
     subprocess.check_call(['git', 'fetch'])
     subprocess.check_call(['git', 'checkout', args.commit])
     os.chdir(workdir)
