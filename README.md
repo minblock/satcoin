@@ -3,7 +3,7 @@ Satcoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/minblock/satellite.svg?branch=master)](https://travis-ci.org/minblock/satellite)
 
-https://satellite.org
+https://satellite.pgn.one/
 
 What is Satcoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Satcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Satcoin Core software, see [https://satellite.org](https://satellite.org).
+the Satcoin Core software, see [https://astrologor.pgn.one](https://satellite.org).
 
 License
 -------
