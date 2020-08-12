@@ -23,7 +23,7 @@ def setup():
         programs += ['lxc', 'debootstrap']
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs.stc'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/minblock/gitian.sigs.stc.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/minblock/gitian.sigs.pic.git'])
     if not os.path.isdir('satellite-detached-sigs'):
         subprocess.check_call(['git', 'clone', 'https://github.com/minblock/satellite-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
