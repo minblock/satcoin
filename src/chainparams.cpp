@@ -94,12 +94,12 @@ public:
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1584106417; // 03/13/2020 @ 1:33pm (UTC)
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1611106417; // 01/20/2021 @ 1:33am (UTC) 
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1659800844; // a year in the future
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1584106417; // 03/13/2020 @ 1:33pm (UTC)
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1611106417; // 01/20/2021 @ 1:33am (UTC) 
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1584106417; // whenever it was
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1659800844; // a year in the future
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000021c075be8300");
@@ -129,11 +129,10 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed.pgn.one");
-        /*vSeeds.emplace_back("dnsseed.thrasher.io");
-        vSeeds.emplace_back("dnsseed.satellitetools.com");
-        vSeeds.emplace_back("dnsseed.satellitepool.org");
-        vSeeds.emplace_back("dnsseed.koin-project.com");*/
+        vSeeds.emplace_back("seed.provigen.net");
+        vSeeds.emplace_back("seed.provgn.com");
+        vSeeds.emplace_back("seed.lockely.com");
+        vSeeds.emplace_back("seed.thecrypto.ca");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,64); //Satcoin addresses begin with S or T
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
