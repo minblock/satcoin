@@ -129,9 +129,6 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed.provigen.net");
-        vSeeds.emplace_back("seed.provgn.com");
-        vSeeds.emplace_back("seed.lockely.com");
         vSeeds.emplace_back("seed.thecrypto.ca");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,64); //Satcoin addresses begin with S or T
@@ -216,7 +213,7 @@ public:
         pchMessageStart[1] = 0xd2;
         pchMessageStart[2] = 0xc8;
         pchMessageStart[3] = 0xf1;
-        nDefaultPort = 19335;
+        nDefaultPort = 22330;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1486949366, 354350, 0x1e0ffff0, 1, 50 * COIN);
@@ -227,9 +224,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.satellitetools.com");
-        vSeeds.emplace_back("seed-b.satellite.loshan.co.uk");
-        vSeeds.emplace_back("dnsseed-testnet.thrasher.io");
+        vSeeds.emplace_back("192.3.3.18");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
