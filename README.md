@@ -3,9 +3,6 @@ Satcoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/minblock/satellite.svg?branch=master)](https://travis-ci.org/minblock/satellite)
 
-https://satellite.pgn.one/
-Block explorer: satplorer.pgn.one
-Stratum mining: stratum0.provgn.com
 What is Satcoin?
 ----------------
 
