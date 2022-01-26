@@ -3,7 +3,7 @@ Satcoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/minblock/satellite.svg?branch=master)](https://travis-ci.org/minblock/satellite)
 
-What is Satcoin?
+What is Satellitecoin?
 ----------------
 
 Satcoin is an experimental digital currency that enables instant payments to
