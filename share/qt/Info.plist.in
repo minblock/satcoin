@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Satcoin-Qt</string>
+  <string>Satellite-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Satcoin-Qt</string>
+  <string>Satellite-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.satellite.Satcoin-Qt</string>
+  <string>org.satellite.Satellite-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.satellite.SatcoinPayment</string>
+      <string>org.satellite.SatellitePayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>satellite</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.satellite.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Satcoin payment request</string>
+      <string>Satellite payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
