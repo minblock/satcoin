@@ -5,19 +5,19 @@ define(_CLIENT_VERSION_MINOR, 17)
 define(_CLIENT_VERSION_REVISION, 1)
 define(_CLIENT_VERSION_BUILD, 8)
 define(_CLIENT_VERSION_IS_RELEASE, true)
-define(_COPYRIGHT_YEAR, 2019)
+define(_COPYRIGHT_YEAR, 2022)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Satcoin Core]])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Satellite Coin Core]])
 AC_INIT([Satcoin Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/minblock/satellite/issues],[satellite],[https://satellite.org/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=satellited
-BITCOIN_GUI_NAME=satellite-qt
-BITCOIN_CLI_NAME=satellite-cli
-BITCOIN_TX_NAME=satellite-tx
+BITCOIN_DAEMON_NAME=satellitecoind
+BITCOIN_GUI_NAME=satellitecoin-qt
+BITCOIN_CLI_NAME=satellitecoin-cli
+BITCOIN_TX_NAME=satellitecoin-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
