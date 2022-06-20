@@ -71,7 +71,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "litecoin.conf";
+const char * const BITCOIN_CONF_FILENAME = "satellitecoin.conf";
 const char * const BITCOIN_SETTINGS_FILENAME = "settings.json";
 
 ArgsManager gArgs;
@@ -631,7 +631,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "litecoin";
+    const char* pszModule = "satellitecoin";
 #endif
     if (pex)
         return strprintf(
@@ -668,7 +668,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Satellitecoin";
 #else
     // Unix-like
-    return pathRet / ".litecoin";
+    return pathRet / ".satellitecoin";
 #endif
 #endif
 }

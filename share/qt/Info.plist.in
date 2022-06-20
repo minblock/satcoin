@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.litecoin.Satellitecoin-Qt</string>
+  <string>org.satellitecoin.Satellitecoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.litecoin.SatellitecoinPayment</string>
+      <string>org.satellitecoin.SatellitecoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>litecoin</string>
+        <string>satellitecoin</string>
       </array>
     </dict>
   </array>

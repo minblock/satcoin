@@ -5,7 +5,7 @@ Setup
 ---------------------
 Satellitecoin Core is the original Satellitecoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Satellitecoin transactions, which requires approximately 22 gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Satellitecoin Core, visit [litecoin.org](https://litecoin.org/).
+To download Satellitecoin Core, visit [provgn.com](https://provgn.com/).
 
 Running
 ---------------------
@@ -15,12 +15,12 @@ The following are some helpful notes on how to run Satellitecoin Core on your na
 
 Unpack the files into a directory and run:
 
-- `bin/litecoin-qt` (GUI) or
-- `bin/litecoind` (headless)
+- `bin/satellitecoin-qt` (GUI) or
+- `bin/satellitecoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run litecoin-qt.exe.
+Unpack the files into a directory, and then run satellitecoin-qt.exe.
 
 ### macOS
 
@@ -28,9 +28,9 @@ Drag Satellitecoin Core to your applications folder, and then run Satellitecoin 
 
 ### Need Help?
 
-* See the documentation at the [Satellitecoin Wiki](https://litecoin.info/) for help and more information.
-* Ask for help on [#litecoin](https://webchat.freenode.net/#litecoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#litecoin).
-* Ask for help on the [SatellitecoinTalk](https://litecointalk.io/) forums, in the [Technical Support board](https://litecointalk.io/c/technical-support).
+* See the documentation at the [Satellitecoin Wiki](https://satellitecoin.info/) for help and more information.
+* Ask for help on [#satellitecoin](https://webchat.freenode.net/#satellitecoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#satellitecoin).
+* Ask for help on the [SatellitecoinTalk](https://satellitecointalk.io/) forums, in the [Technical Support board](https://satellitecointalk.io/c/technical-support).
 
 Building
 ---------------------
@@ -64,8 +64,8 @@ The Satellitecoin repo's [root README](/README.md) contains relevant information
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [SatellitecoinTalk](https://litecointalk.io/) forums.
-* Discuss general Satellitecoin development on #litecoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#litecoin-dev).
+* Discuss on the [SatellitecoinTalk](https://satellitecointalk.io/) forums.
+* Discuss general Satellitecoin development on #satellitecoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#satellitecoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

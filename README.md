@@ -1,9 +1,9 @@
 Satellitecoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/minblock/litecoin.svg?branch=master)](https://travis-ci.org/minblock/litecoin)
+[![Build Status](https://travis-ci.org/minblock/satellitecoin.svg?branch=master)](https://travis-ci.org/minblock/satellitecoin)
 
-https://litecoin.org
+https://provgn.com
 
 What is Satellitecoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Satellitecoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Satellitecoin Core software, see [https://litecoin.org](https://litecoin.org).
+the Satellitecoin Core software, see [https://provgn.com](https://provgn.com).
 
 License
 -------
@@ -27,7 +27,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
-completely stable. [Tags](https://github.com/minblock/litecoin/tags) are created
+completely stable. [Tags](https://github.com/minblock/satellitecoin/tags) are created
 regularly from release branches to indicate new official, stable release versions of Satellitecoin Core.
 
 The https://github.com/minblock/gui repository is used exclusively for the
@@ -38,11 +38,11 @@ that repository unless it is for development reasons.
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
 
-The developer [mailing list](https://groups.google.com/forum/#!forum/litecoin-dev)
+The developer [mailing list](https://groups.google.com/forum/#!forum/satellitecoin-dev)
 should be used to discuss complicated or controversial changes before working
 on a patch set.
 
-Developer IRC can be found on Freenode at #litecoin-dev.
+Developer IRC can be found on Freenode at #satellitecoin-dev.
 
 Testing
 -------

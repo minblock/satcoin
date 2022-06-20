@@ -1,0 +1,4 @@
+libmw/test/tests/node/test_test_satellitecoin-Test_CoinsView.o: \
+ libmw/test/tests/node/Test_CoinsView.cpp /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

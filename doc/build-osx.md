@@ -66,8 +66,8 @@ brew install berkeley-db4
 
 1. Clone the Satellitecoin Core source code:
     ```shell
-    git clone https://github.com/minblock/litecoin
-    cd litecoin
+    git clone https://github.com/minblock/satellitecoin
+    cd satellitecoin
     ```
 
 2.  Build Satellitecoin Core:
@@ -103,18 +103,18 @@ In this case there is no dependency on [*Berkeley DB*](#berkeley-db) and [*SQLit
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
 
 ## Running
-Satellitecoin Core is now available at `./src/litecoind`
+Satellitecoin Core is now available at `./src/satellitecoind`
 
 Before running, you may create an empty configuration file:
 ```shell
 mkdir -p "/Users/${USER}/Library/Application Support/Satellitecoin"
 
-touch "/Users/${USER}/Library/Application Support/Satellitecoin/litecoin.conf"
+touch "/Users/${USER}/Library/Application Support/Satellitecoin/satellitecoin.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Satellitecoin/litecoin.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Satellitecoin/satellitecoin.conf"
 ```
 
-The first time you run litecoind, it will start downloading the blockchain. This process could
+The first time you run satellitecoind, it will start downloading the blockchain. This process could
 take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
@@ -124,9 +124,9 @@ tail -f $HOME/Library/Application\ Support/Satellitecoin/debug.log
 
 ## Other commands:
 ```shell
-./src/litecoind -daemon      # Starts the litecoin daemon.
-./src/litecoin-cli --help    # Outputs a list of command-line options.
-./src/litecoin-cli help      # Outputs a list of RPC commands when the daemon is running.
+./src/satellitecoind -daemon      # Starts the satellitecoin daemon.
+./src/satellitecoin-cli --help    # Outputs a list of command-line options.
+./src/satellitecoin-cli help      # Outputs a list of RPC commands when the daemon is running.
 ```
 
 ## Notes

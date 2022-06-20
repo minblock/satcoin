@@ -1,17 +1,17 @@
 Satellitecoin Core version 0.18.1 is now available from:
 
-  <https://download.litecoin.org/litecoin-0.18.1/>
+  <https://download.provgn.com/satellitecoin-0.18.1/>
 
 This is a major version release, including new features, various bug
 fixes and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/minblock/litecoin/issues>
+  <https://github.com/minblock/satellitecoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://groups.google.com/forum/#!forum/litecoin-dev>
+  <https://groups.google.com/forum/#!forum/satellitecoin-dev>
 
 How to Upgrade
 ==============
@@ -19,7 +19,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has
 completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-`/Applications/Satellitecoin-Qt` (on Mac) or `litecoind`/`litecoin-qt` (on
+`/Applications/Satellitecoin-Qt` (on Mac) or `satellitecoind`/`satellitecoin-qt` (on
 Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database
@@ -86,7 +86,7 @@ Configuration option changes
   messages that ZMQ will queue in memory (the "high water mark") before
   dropping additional messages.  The default value is 1,000, the same as
   was used for previous releases.  See the [ZMQ
-  documentation](https://github.com/minblock/litecoin/blob/master/doc/zmq.md#usage)
+  documentation](https://github.com/minblock/satellitecoin/blob/master/doc/zmq.md#usage)
   for details.
 
 - The `rpcallowip` option can no longer be used to automatically listen
@@ -110,7 +110,7 @@ Configuration option changes
   disconnect/ban behavior will not cause a node that is whitelisting
   another to be dropped by peers.  Users can still explicitly enable
   this behavior with the command line option (and may want to consider
-  [contacting](mailto:contact@litecoin.org) the Satellitecoin Core
+  [contacting](mailto:contact@provgn.com) the Satellitecoin Core
   project to let us know about their use-case, as this feature could be
   deprecated in the future).
 
@@ -124,24 +124,24 @@ in LTC per kilobyte, not litoshi per byte.
 Documentation
 -------------
 
-- A new short [document](https://github.com/minblock/litecoin/blob/master/doc/JSON-RPC-interface.md)
+- A new short [document](https://github.com/minblock/satellitecoin/blob/master/doc/JSON-RPC-interface.md)
   about the JSON-RPC interface describes cases where the results of an
   RPC might contain inconsistencies between data sourced from different
   subsystems, such as wallet state and mempool state.  A note is added
-  to the [REST interface documentation](https://github.com/minblock/litecoin/blob/master/doc/REST-interface.md)
+  to the [REST interface documentation](https://github.com/minblock/satellitecoin/blob/master/doc/REST-interface.md)
   indicating that the same rules apply.
 
 - Further information is added to the [JSON-RPC
-  documentation](https://github.com/minblock/litecoin/blob/master/doc/JSON-RPC-interface.md)
+  documentation](https://github.com/minblock/satellitecoin/blob/master/doc/JSON-RPC-interface.md)
   about how to secure this interface.
 
-- A new [document](https://github.com/minblock/litecoin/blob/master/doc/litecoin-conf.md)
-  about the `litecoin.conf` file describes how to use it to configure
+- A new [document](https://github.com/minblock/satellitecoin/blob/master/doc/satellitecoin-conf.md)
+  about the `satellitecoin.conf` file describes how to use it to configure
   Satellitecoin Core.
 
 - A new document introduces Satellitecoin Core's BIP174 [Partially-Signed
   Satellitecoin Transactions
-  (PSBT)](https://github.com/minblock/litecoin/blob/master/doc/psbt.md)
+  (PSBT)](https://github.com/minblock/satellitecoin/blob/master/doc/psbt.md)
   interface, which is used to allow multiple programs to collaboratively
   work to create, sign, and broadcast new transactions.  This is useful
   for offline (cold storage) wallets, multisig wallets, coinjoin
@@ -149,7 +149,7 @@ Documentation
   to interact to generate a complete transaction.
 
 - The [output script
-  descriptor](https://github.com/minblock/litecoin/blob/master/doc/descriptors.md)
+  descriptor](https://github.com/minblock/satellitecoin/blob/master/doc/descriptors.md)
   documentation has been updated with information about new features in
   this still-developing language for describing the output scripts that
   a wallet or other program wants to receive notifications for, such as
@@ -170,7 +170,7 @@ Build system changes
 
 - The minimum required version of Qt (when building the GUI) has been
   increased from 5.2 to 5.5.1 (the [depends
-  system](https://github.com/minblock/litecoin/blob/master/depends/README.md)
+  system](https://github.com/minblock/satellitecoin/blob/master/depends/README.md)
   provides 5.9.7)
 
 New RPCs
@@ -188,7 +188,7 @@ New RPCs
   they've been running.
 
 - `deriveaddresses` returns one or more addresses corresponding to an
-  [output descriptor](https://github.com/minblock/litecoin/blob/master/doc/descriptors.md).
+  [output descriptor](https://github.com/minblock/satellitecoin/blob/master/doc/descriptors.md).
 
 - `getdescriptorinfo` accepts a descriptor and returns information about
   it, including its computed checksum.
@@ -297,7 +297,7 @@ in the Low-level Changes section below.
   origin information imported through `importmulti` will have their key
   origin information stored in the wallet for use with creating PSBTs.
   More information about descriptors can be found
-  [here](https://github.com/minblock/litecoin/blob/master/doc/descriptors.md).
+  [here](https://github.com/minblock/satellitecoin/blob/master/doc/descriptors.md).
 
 - `listunspent` has been modified so that it also returns
   `witnessScript`, the witness script in the case of a P2WSH or
@@ -320,7 +320,7 @@ Deprecated or removed RPCs
 - The 'account' API is removed after being deprecated in v0.17.  The
   'label' API was introduced in v0.17 as a replacement for accounts.
   See the [release notes from
-  v0.17](https://github.com/minblock/litecoin/blob/master/doc/release-notes/release-notes-0.17.0.md#label-and-account-apis-for-wallet)
+  v0.17](https://github.com/minblock/satellitecoin/blob/master/doc/release-notes/release-notes-0.17.0.md#label-and-account-apis-for-wallet)
   for a full description of the changes from the 'account' API to the
   'label' API.
 
@@ -336,7 +336,7 @@ Deprecated or removed RPCs
   require or use the wallet component. Calling `generatetoaddress` with
   an address returned by the `getnewaddress` RPC gives the same
   functionality as the old `generate` RPC.  To continue using `generate`
-  in this version, restart litecoind with the `-deprecatedrpc=generate`
+  in this version, restart satellitecoind with the `-deprecatedrpc=generate`
   configuration option.
 
 - Be reminded that parts of the `validateaddress` command have been
@@ -383,7 +383,7 @@ Graphical User Interface (GUI)
 Tools
 -----
 
-- A new `litecoin-wallet` tool is now distributed alongside Satellitecoin
+- A new `satellitecoin-wallet` tool is now distributed alongside Satellitecoin
   Core's other executables.  Without needing to use any RPCs, this tool
   can currently create a new wallet file or display some basic
   information about an existing wallet, such as whether the wallet is

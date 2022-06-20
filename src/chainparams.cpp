@@ -107,17 +107,17 @@ public:
         pchMessageStart[1] = 0x45;
         pchMessageStart[2] = 0x45;
         pchMessageStart[3] = 0x44;
-        nDefaultPort = 2337;
+        nDefaultPort = 6666;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 0.128;
         m_assumed_chain_state_size = 0.029;
 
-        genesis = CreateGenesisBlock(1547936345, 1016379, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1578526632, 609201, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x90525e3e1f966a75e8e2d3545962f27a763f6de9f1308de515edc412be3644e9"));
-        assert(genesis.hashMerkleRoot == uint256S("0x2cc06d170c33cdbf144e3e597a97a8786fcd84b04a0b3283c054c559646dc855"));
+        assert(consensus.hashGenesisBlock == uint256S("0xd5ea20e98548d4d56832c4b77630ccda88066e89adcf826565f6f683c107f854"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6ff7456ab0c79d9d8f984d1863cfc89b2f0475954d2ae67c76c38f7fdd19a174"));
 
-        // Note that of those which support the service bits prefix, most only support a subset of
+	// Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
@@ -214,11 +214,12 @@ public:
         m_assumed_blockchain_size = 4;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1486949366, 1268525, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1486949366, 354350, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x1cef4a5283b4e4848cb85ad719312e50f7b63eebbce6627b53db498196fe302e"));
-        assert(genesis.hashMerkleRoot == uint256S("0x2cc06d170c33cdbf144e3e597a97a8786fcd84b04a0b3283c054c559646dc855"));
-        vFixedSeeds.clear();
+        assert(consensus.hashGenesisBlock == uint256S("0x46d5c15e70db4512fd69e5feefae95a8ddba9a5d00faf1b7447cc536bf5da125"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6ff7456ab0c79d9d8f984d1863cfc89b2f0475954d2ae67c76c38f7fdd19a174"));
+
+       vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("testseed.provgn.com");
@@ -310,12 +311,12 @@ public:
 
         UpdateActivationParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1296688602, 1, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x31084fe36da4b52656a4be23f30c5fdd25304e3b0a937408fd389f62ac76beac"));
-        assert(genesis.hashMerkleRoot == uint256S("0x2cc06d170c33cdbf144e3e597a97a8786fcd84b04a0b3283c054c559646dc855"));
+        assert(consensus.hashGenesisBlock == uint256S("0x72306603cfb4ec890a6162848a6c5020ee58746bd84c36d3d93d239c1021968f"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6ff7456ab0c79d9d8f984d1863cfc89b2f0475954d2ae67c76c38f7fdd19a174"));
 
-        vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
+	vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
 
         fDefaultConsistencyChecks = true;
@@ -422,7 +423,7 @@ std::unique_ptr<const CChainParams> CreateChainParams(const ArgsManager& args, c
     } else if (chain == CBaseChainParams::TESTNET) {
         return std::unique_ptr<CChainParams>(new CTestNetParams());
     } else if (chain == CBaseChainParams::SIGNET) {
-        return std::unique_ptr<CChainParams>(new CTestNetParams()); // TODO: Support SigNet
+        return std::unique_ptr<CChainParams>(new CTestNetParams());
     } else if (chain == CBaseChainParams::REGTEST) {
         return std::unique_ptr<CChainParams>(new CRegTestParams(args));
     }

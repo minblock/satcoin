@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Satellitecoin"
-            VALUE "FileDescription",    "litecoin-tx (CLI Satellitecoin transaction editor utility)"
+            VALUE "FileDescription",    "satellitecoin-tx (CLI Satellitecoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "litecoin-tx"
+            VALUE "InternalName",       "satellitecoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "litecoin-tx.exe"
-            VALUE "ProductName",        "litecoin-tx"
+            VALUE "OriginalFilename",   "satellitecoin-tx.exe"
+            VALUE "ProductName",        "satellitecoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

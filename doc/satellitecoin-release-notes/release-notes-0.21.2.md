@@ -1,16 +1,16 @@
 Satellitecoin Core version 0.21.2 is now available from:
 
- <https://download.litecoin.org/litecoin-0.21.2/>.
+ <https://download.provgn.com/satellitecoin-0.21.2/>.
 
 This is the largest update ever, providing full node, wallet, and mining support for MWEB.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/minblock/litecoin/issues>
+  <https://github.com/minblock/satellitecoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://groups.google.com/forum/#!forum/litecoin-dev>
+  <https://groups.google.com/forum/#!forum/satellitecoin-dev>
 
 
 How to upgrade: 
@@ -21,7 +21,7 @@ Firstly, thank you for running Satellitecoin Core and helping secure the network
 As you’re running an older version of Satellitecoin Core, shut it down. Wait until it’s completely shut down  - which might take a few minutes for older versions - then follow these simple steps:
 For Windows: simply run the installer 
 For Mac: copy over to `/Applications/Satellitecoin-Qt` 
-For Linux: copy cover `litecoind`/`litecoin-qt`.
+For Linux: copy cover `satellitecoind`/`satellitecoin-qt`.
 
 NB: upgrading directly from an ‘end of life’ version of Satellitecoin Core is possible, but it might take a while if the data directory needs to be migrated. Old wallet versions of Satellitecoin Core are generally supported.
  
