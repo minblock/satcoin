@@ -1,9 +1,9 @@
-Satcoin Core
+Satellitecoin Core
 =============
 
 Intro
 -----
-Satcoin is a free open source peer-to-peer electronic cash system that is
+Satellitecoin is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -11,13 +11,13 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run satellite-qt.exe.
+Unpack the files into a directory and run litecoin-qt.exe.
 
-Satcoin Core is the original Satcoin client and it builds the backbone of the network.
-However, it downloads and stores the entire history of Satcoin transactions;
+Satellitecoin Core is the original Satellitecoin client and it builds the backbone of the network.
+However, it downloads and stores the entire history of Satellitecoin transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.
 
-See the satellite wiki at:
-  https://satellite.info/
+See the litecoin wiki at:
+  https://litecoin.info/
 for more help and information.
