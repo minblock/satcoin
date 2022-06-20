@@ -136,7 +136,7 @@ public:
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_main), std::end(chainparams_seed_main));
 
-        fDefaultconsistencyChecks = false;
+        fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         m_is_test_chain = false;
         m_is_mockable_chain = false;
@@ -235,7 +235,7 @@ public:
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_test), std::end(chainparams_seed_test));
 
-        fDefaultconsistencyChecks = false;
+        fDefaultConsistencyChecks = false;
         fRequireStandard = false;
         m_is_test_chain = true;
         m_is_mockable_chain = false;
@@ -318,7 +318,7 @@ public:
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
 
-        fDefaultconsistencyChecks = true;
+        fDefaultConsistencyChecks = true;
         fRequireStandard = true;
         m_is_test_chain = true;
         m_is_mockable_chain = true;
