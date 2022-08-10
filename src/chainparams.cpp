@@ -341,8 +341,7 @@ public:
         m_fallback_fee_enabled = true;
     }
 };
-
-    /**
+   /**
      * Allows modifying the Version Bits regtest parameters.
      */
     void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
@@ -384,8 +383,6 @@ void CRegTestParams::UpdateVersionBitsParametersFromArgs(const ArgsManager& args
         }
     }
 }
-
-
 
 static std::unique_ptr<const CChainParams> globalChainParams;
 
