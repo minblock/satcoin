@@ -6,11 +6,10 @@
 #include <chainparamsbase.h>
 
 #include <tinyformat.h>
-#include <util.h>
-#include <utilmemory.h>
+#include <util/system.h>
+#include <util/memory.h>
 
 #include <assert.h>
-
 const std::string CBaseChainParams::MAIN = "main";
 const std::string CBaseChainParams::TESTNET = "test";
 const std::string CBaseChainParams::REGTEST = "regtest";
