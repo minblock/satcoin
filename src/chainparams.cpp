@@ -304,6 +304,8 @@ public:
         m_assumed_blockchain_size = 0.0;
         m_assumed_chain_state_size = 0.0;
 
+        UpdateVersionBitsParametersFromArgs(args);
+
         genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x72306603cfb4ec890a6162848a6c5020ee58746bd84c36d3d93d239c1021968f"));
@@ -341,9 +343,7 @@ public:
         m_fallback_fee_enabled = true;
     }
 };
-   /**
-     * Allows modifying the Version Bits regtest parameters.
-     */
+
     void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
     {
         consensus.vDeployments[d].nStartTime = nStartTime;
