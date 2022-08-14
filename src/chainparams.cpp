@@ -342,7 +342,7 @@ public:
         /* enable fallback fee on regtest */
         m_fallback_fee_enabled = true;
     }
-};
+
 
     void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
     {
