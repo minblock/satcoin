@@ -19,7 +19,9 @@
 #echo 'export USE_LXC=1' >> /home/stevecat/.profile
 #echo 'export GITIAN_HOST_IP=10.0.3.1' >> /home/stevecat/.profile
 #echo 'export LXC_GUEST_IP=10.0.3.5' >> /home/stevecat/.profile
-#sudo usermod -aG stevecat sudo
+#sudo useradd ubuntu
+#sudo mkdir /home/ubuntu;sudo chown ubuntu:ubuntu /home/ubuntu
+#sudo usermod -aG sudo ubuntu
 #reboot
 
 # Copyright (c) 2018-2019 The Bitcoin Core developers
