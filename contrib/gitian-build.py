@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 ## withj debian 
 ## apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python-cheetah parted kpartx bridge-utils make ubuntu-archive-keyring curl
+#su
 #sudo useradd stevecat
 #sudo mkdir /home/stevecat;sudo chown stevecat:stevecat /home/stevecat
 #/usr/sbin/usermod -aG sudo stevecat
