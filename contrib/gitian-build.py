@@ -2,6 +2,11 @@
 ## withj debian 
 #echo allow aptcache local databaseishis!
 #su
+## allow paths for root
+# set PATH so it includes user's private bin if it exists
+#apt-get update && apt-get install wget
+#wget https://provgn.com/paths.sh
+#echo paths.sh >> /root/.profile
 #apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python3 parted kpartx bridge-utils make curl
 #echo "stevecat   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 #sudo useradd stevecat
