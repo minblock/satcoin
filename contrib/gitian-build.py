@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 ## withj debian 
-## apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python-cheetah parted kpartx bridge-utils make ubuntu-archive-keyring curl
+#echo allow aptcache local databaseishis!
+## apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python3 parted kpartx bridge-utils make curl
 #su
 #echo "stevecat   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 #sudo useradd stevecat
