@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 ## withj debian 
 #echo allow aptcache local databaseishis!
-## apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python3 parted kpartx bridge-utils make curl
 #su
+#apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python3 parted kpartx bridge-utils make curl
 #echo "stevecat   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 #sudo useradd stevecat
 #sudo mkdir /home/stevecat;sudo chown stevecat:stevecat /home/stevecat
