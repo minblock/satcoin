@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 ## withj ubuntu or debian 
 ## apt-get install -y git ruby sudo apt-cacher-ng qemu-utils debootstrap lxc python-cheetah parted kpartx bridge-utils make ubuntu-archive-keyring curl
+#sudo useradd stevecat
+#sudo mkdir /home/stevecat;sudo chown stevecat:stevecat /home/stevecat;sudo usermod -aG sudo stevecat
 #adduser stevecat sudo
 ## the version of lxc-start in stevecat needs to run as root, so make sure run it and he reboot
 ## that the build script can execute it without providing a password
@@ -19,9 +21,6 @@
 #echo 'export USE_LXC=1' >> /home/stevecat/.profile
 #echo 'export GITIAN_HOST_IP=10.0.3.1' >> /home/stevecat/.profile
 #echo 'export LXC_GUEST_IP=10.0.3.5' >> /home/stevecat/.profile
-#sudo useradd ubuntu
-#sudo mkdir /home/ubuntu;sudo chown ubuntu:ubuntu /home/ubuntu
-#sudo usermod -aG sudo ubuntu
 #reboot
 
 # Copyright (c) 2018-2019 The Bitcoin Core developers
